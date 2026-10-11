@@ -78,4 +78,18 @@ while True:
         else:
             print("Student not found.")
 
-    elif
+    elif choice == "5":
+        name = input("Enter student name: ")
+
+        if manager.delete_student(name):
+            save_students(manager.students, "students.json")
+            print("Student deleted successfully.")
+        else:
+            print("Student not found.")
+
+    elif choice == "6":
+        print("Exiting application.")
+        break
+
+    else:
+        print("Invalid choice.")
